@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Comic Generator</title>
+    <link rel="stylesheet" href="../src/styles/app.css">
+    <link rel="stylesheet" href="../src/styles/main.css">
+</head>
+
+<body>
+    <div class="background">
+        <!-- Header -->
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="logo">Word<span>2</span>Wow</a>
+                <div class="hamburger" id="hamburger">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+
+<!-- Input Section -->
+<section id="input-section" class="input-section">
+    <h2 class="section-title animate-title">Create Your Story</h2>
+    <form id="storyForm" class="glass-container enhanced-form">
+        <div class="input-group">
+            <textarea id="storyInput" rows="6" maxlength="500" required></textarea>
+            <label for="storyInput" class="floating-label">Enter Your Story</label>
+            <div class="char-counter" id="charCounter">0 / 500</div>
+        </div>
+        <button type="submit" class="btn glow-btn">Generate Comic</button>
+    </form>
+</section>
+
+
+        <!-- Comic Layout Section -->
+        <section id="preview-section" class="preview-section">
+            <h2 class="section-title">Your Comic Preview</h2>
+            <div id="comicLayout" class="comic-layout">
+                <p class="placeholder-text">Your generated comic will appear here...</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Word2Wow | Transforming Stories with AI</p>
+        </footer>
+    </div>
+
+    <script src="../src/scripts/app.js"></script>
+</body>
+
+</html>

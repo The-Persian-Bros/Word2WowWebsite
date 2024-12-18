@@ -13,6 +13,10 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Background with colorful shadows */
 .background {
     position: relative;
@@ -173,7 +177,7 @@ body {
 
 /* Hero Text */
 .hero-title {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
@@ -186,7 +190,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #dcdcdc;
     margin: 1rem 0 2rem;
     animation: fadeInUp 1.5s ease-out;
@@ -195,7 +199,7 @@ body {
 /* Try It Now Button */
 .btn {
     display: inline-block;
-    padding: 0.8rem 2rem;
+    padding: 0.9rem 2rem;
     background-color: #00bfff;
     color: #0b0d17;
     font-weight: bold;
@@ -213,10 +217,34 @@ body {
 }
 
 /* Animations */
+.animated-card {
+    animation: fadeInUp 1s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.feature-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00bfff;
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.9);
+}
+
+.feature-description {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 1rem;
+    text-align: center;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -268,6 +296,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     width: 450px;
     transition: transform 0.3s ease;
+    line-height: 35px;
 }
 
 .card:hover {
@@ -577,4 +606,42 @@ form button:hover {
 /* Disable Scroll on Body */
 body.modal-active {
     overflow: hidden;
+}
+.section-spacing {
+    margin: 7rem 0;
+}
+.magical-effect {
+    position: relative;
+    padding: 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1f36, #0b0d17);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.magical-effect::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 191, 255, 0.7), transparent);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+    pointer-events: none;
+}
+
+.highlight-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00bfff;
+    text-shadow: 0 0 20px rgba(0, 191, 255, 0.9);
+}
+
+.highlight-description {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 1.5rem;
+    text-align: center;
 }
